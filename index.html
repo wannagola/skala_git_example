@@ -13,21 +13,28 @@
         th, td {
               border: 0.1px solid black;
         }
+        *{
+            text-align: center;
+            color: aliceblue;
+        }
     </style>
 </head>
 <body style="background-color: rgb(173, 196, 239);">
     <h1 style="color: rgb(2, 52, 77);text-align: center;">민기의 홈페이지</h1>
     <hr>
-    <img id="eye" src="/eyes_open.png" width="300" height="300" style="text-align: center;">
+    <div style="text-align: center;">
+        <img id="eye" src="/eyes_open.png" width="300" height="300">
+    </div>
     <hr>
     <br>
     <p title='hello "Minki" good' style="text-align: center;">Welcome to SKALA
     <br>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5eE21zXkGtw5nzEiJ5JIZGxLcH0VxNSaVLtgKSSuBCA&s" alt="SKALA.com" style="width: 220px;height: 142px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5eE21zXkGtw5nzEiJ5JIZGxLcH0VxNSaVLtgKSSuBCA&s" alt="SKALA.com" style="width: 420px;height: 342px;">
     <br>
     <a href="https://www.2026skala.co.kr/" style = text-align:center;>SKALA 소개 페이지</a>
     </p>
     <hr>
+    <div>
     <ul style="list-style-type: square;">
         <li>Front-end 기술 : <span style="color: azure; font-weight: bold;">HTML, CSS, Javascript</span></li>
         <li>Back-end 기술 : <span style="color: azure; font-weight: bold;">Node.js(js 기반), FastAPI(python 기반), Spring Boot(java 기반)</span></li>
@@ -47,6 +54,7 @@
         </ul>
         <li>DataBase 기술 : <span style="color: azure; font-weight: bold;">Oracle, MySQL, MongoDB, Postgre DB 등등...</span></li>
     </ol>
+    </div>
     <dl>
         <dt>HTML</dt>
         <dd>상세 설명</dd>
@@ -65,7 +73,7 @@
     
     <br>
 
-    <form>
+    <form style="text-align: center;">
         <fieldset>
             <legend>계정 정보</legend>
             <p>
@@ -94,7 +102,9 @@
 
     </form>
     <br>
-    <button id="btn">제출하기</button>
+    <div style="text-align: center;">
+        <button id="btn">제출하기</button>
+    </div>
     <script>
         console.log(btn);
         btn.onclick = function(){
@@ -105,3 +115,12 @@
 
 </body>
 </html>
+
+<!--
+css 적용 우선 순위
+1. 인라인(element 내에 특별히 지정한 것)
+2. Id 기준
+3. 클래스,attribute selectors
+4. Elements ex. h1, ::before ::after
+5. 전체 *, :where()
+-->
