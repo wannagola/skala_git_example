@@ -6,22 +6,102 @@
     <title>Document</title>
     <style>
         li {color : rgb(6, 108, 64)}
+        table{
+            border-collapse: collapse;
+        }
+        
+        th, td {
+              border: 0.1px solid black;
+        }
     </style>
 </head>
-<body>
-    <h1 style="color: crimson;">민기의 홈페이지</h1>
-    <ul>
-        <li>Front-end 기술 : HTML, CSS, Javascript</li>
-        <li>Back-end 기술 : Node.js(js 기반), FastAPI(python 기반), Spring Boot(java 기반)</li>
-        <li>DataBase 기술 : Oracle, MySQL, MongoDB, Postgre DB 등등...</li>
+<body style="background-color: rgb(173, 196, 239);">
+    <h1 style="color: rgb(2, 52, 77);text-align: center;">민기의 홈페이지</h1>
+    <hr>
+    <img id="eye" src="/eyes_open.png" width="300" height="300" style="text-align: center;">
+    <hr>
+    <br>
+    <p title='hello "Minki" good' style="text-align: center;">Welcome to SKALA
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5eE21zXkGtw5nzEiJ5JIZGxLcH0VxNSaVLtgKSSuBCA&s" alt="SKALA.com" style="width: 220px;height: 142px;">
+    <br>
+    <a href="https://www.2026skala.co.kr/" style = text-align:center;>SKALA 소개 페이지</a>
+    </p>
+    <hr>
+    <ul style="list-style-type: square;">
+        <li>Front-end 기술 : <span style="color: azure; font-weight: bold;">HTML, CSS, Javascript</span></li>
+        <li>Back-end 기술 : <span style="color: azure; font-weight: bold;">Node.js(js 기반), FastAPI(python 기반), Spring Boot(java 기반)</span></li>
+        <li>DataBase 기술 : <span style="color: azure; font-weight: bold;">Oracle, MySQL, MongoDB, Postgre DB 등등...</span></li>
     </ul>
-    <button id="btn">button</button>
+    <ol type="1">
+        <li>Front-end 기술 : <span style="color: azure; font-weight: bold;">HTML, CSS, Javascript</span></li>
+        <li>Back-end 기술 : <span style="color: azure; font-weight: bold;">Node.js(js 기반), FastAPI(python 기반), Spring Boot(java 기반)</span></li>
+        <li>DataBase 기술 : <span style="color: azure; font-weight: bold;">Oracle, MySQL, MongoDB, Postgre DB 등등...</span></li>
+    </ol>
+    <ol type="A">
+        <li>Front-end 기술 : <span style="color: azure; font-weight: bold;">HTML, CSS, Javascript</span></li>
+        <li>Back-end 기술 : <span style="color: azure; font-weight: bold;">Node.js(js 기반), FastAPI(python 기반), Spring Boot(java 기반)</span></li>
+        <ul>
+            <li>ul 아래 li로 개별 항목을 지정해서 중첩시킨 리스트가 가능한 예시</li>
+            <li>ul은 순서 없는 항목, ol은 순서 있는 항목</li>
+        </ul>
+        <li>DataBase 기술 : <span style="color: azure; font-weight: bold;">Oracle, MySQL, MongoDB, Postgre DB 등등...</span></li>
+    </ol>
+    <dl>
+        <dt>HTML</dt>
+        <dd>상세 설명</dd>
+    </dl>
+    <h2>TR elements define table rows</h2>
+    <table>
+        <tr>
+            <th>hello!</th>
+            <th>MINKI!</th>
+        </tr>
+        <tr>
+            <td>hello</td>
+            <td>world</td>
+        </tr>
+    </table>
+    
+    <br>
+
+    <form>
+        <fieldset>
+            <legend>계정 정보</legend>
+            <p>
+                <label for="userId">아이디: </label>
+                <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 영문/숫자">
+                <small>(필수)</small>
+            </p>
+            <p>
+                <label for="userPw">비밀번호: </label>
+                <input type="text" id="userPw" name="userPw" minlength="8" required placeholder="8자 이상 입력">
+                <small>(필수)</small>
+            </p>
+            <p>
+                <label for="userEmail">이메일: </label>
+                <input type="text" id="userEmail" name="userEmail" placeholder="example">
+                @
+                <select name="emailDomain">
+                    <option value="direct">직접 입력</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="sk.com">sk.com</option>
+                </select>
+                <small>(필수)</small>
+            </p>
+        </fieldset>
+
+    </form>
+    <br>
+    <button id="btn">제출하기</button>
     <script>
         console.log(btn);
         btn.onclick = function(){
-            alert("버튼이 눌렸습니다!")
+            alert("제출이 완료 되었습니다!")
         }
     </script>
+
 
 </body>
 </html>
